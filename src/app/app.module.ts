@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 
 //components
@@ -12,6 +13,9 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
 //routes
 import { APP_ROUTING } from './app.routes';
 
+//services
+import { InformacionService } from './services/informacion.service';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +28,12 @@ import { APP_ROUTING } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    InformacionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
