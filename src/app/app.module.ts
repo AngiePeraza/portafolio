@@ -15,6 +15,7 @@ import { APP_ROUTING } from './app.routes';
 
 //services
 import { InformacionService } from './services/informacion.service';
+import { ProductosService } from './services/productos.service';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { InformacionService } from './services/informacion.service';
     APP_ROUTING
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
